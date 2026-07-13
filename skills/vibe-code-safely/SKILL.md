@@ -25,6 +25,15 @@ and propose a separate task when the request grows.
 For trivial, reversible work, use judgment: state the goal and a direct check
 without creating unnecessary process overhead.
 
+For other implementation work, provide this preflight before editing:
+
+```text
+Goal:
+Assumptions / open questions:
+Plan:
+Verification:
+```
+
 Treat auth, payments, secrets, personal data, production infrastructure,
 destructive operations, and irreversible migrations as escalation triggers.
 Explain the risk and seek explicit direction before proceeding.
@@ -47,5 +56,17 @@ Explain the risk and seek explicit direction before proceeding.
 
 ## Hand off clearly
 
-Report what changed and why, verification evidence, limitations or uncertainty,
-and the next bounded action when one exists.
+End substantive work with this format:
+
+```text
+Changes:
+Evidence:
+Limitations:
+Next bounded action:
+```
+
+## Project-specific rules
+
+Read and follow the target repository's instruction files, including any
+project-specific rules appended to its `AGENTS.md` or `CLAUDE.md`. Surface a
+conflict instead of silently choosing between general and project rules.

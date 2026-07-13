@@ -39,6 +39,11 @@ available across projects.
 - Risky changes trigger an explicit pause instead of silent execution.
 - Handoffs contain actual verification evidence and visible limitations.
 
+The guideline also requires a short preflight before substantial implementation
+and a structured handoff afterwards. Append your project’s stack, test commands,
+architecture constraints, and security boundaries to the `Project-specific
+rules` section in the same file—no additional framework required.
+
 ## Examples
 
 See [EXAMPLES.md](EXAMPLES.md) for examples of turning vague prompts into
