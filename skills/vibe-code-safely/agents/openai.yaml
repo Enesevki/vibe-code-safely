@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vibe Code Safely"
+  short_description: "Keep AI-assisted coding scoped, simple, and evidence-based."
+  default_prompt: "Use $vibe-code-safely to plan and execute this coding task."
