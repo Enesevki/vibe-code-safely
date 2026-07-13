@@ -49,6 +49,17 @@ rules` section in the same file—no additional framework required.
 See [EXAMPLES.md](EXAMPLES.md) for examples of turning vague prompts into
 bounded, verifiable requests.
 
+## How to know it is working
+
+These guidelines are working when you see:
+
+- Fewer unnecessary lines in diffs: requested changes, not drive-by cleanup.
+- Clarifying questions and a preflight before substantial implementation.
+- Smaller rewrites because the first solution matches explicit success criteria.
+- Real commands, test output, and unverified limits in handoffs—not just
+  “it works”.
+- Explicit pauses before risky or scope-expanding work.
+
 ## License
 
 MIT

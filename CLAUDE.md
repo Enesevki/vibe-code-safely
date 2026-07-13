@@ -25,8 +25,12 @@ For other implementation work, provide this preflight before editing:
 ```text
 Goal:
 Assumptions / open questions:
+Non-goals:
 Plan:
+  1. [Step] -> verify: [check]
+  2. [Step] -> verify: [check]
 Verification:
+Risk / escalation:
 ```
 
 Treat auth, payments, secrets, personal data, production infrastructure,
@@ -40,6 +44,10 @@ Explain the risk and seek explicit direction before proceeding.
   error handling for impossible scenarios, or unrelated cleanup.
 - Match existing conventions unless a change is part of the request.
 - Ensure every changed line traces directly to the approved goal.
+- Do not "improve" adjacent code, comments, or formatting as a side effect.
+- Do not refactor code that is not broken or part of the request.
+- Mention unrelated dead code or issues; do not silently fix them.
+- Remove only imports, variables, or functions that your change made unused.
 
 ## Verify honestly
 
@@ -49,13 +57,20 @@ Explain the risk and seek explicit direction before proceeding.
   readiness, or completeness without supporting evidence.
 - State what could not be verified and the resulting risk.
 
+When behavior can be tested, turn vague tasks into verifiable goals:
+
+- "Add validation" -> write tests for invalid inputs, then make them pass.
+- "Fix the bug" -> write a test that reproduces it, then make it pass.
+- "Refactor X" -> ensure relevant tests pass before and after.
+
 ## Hand off clearly
 
 End substantive work with this format:
 
 ```text
 Changes:
-Evidence:
+Evidence (tests run, commands executed, actual output):
+What was NOT verified and why:
 Limitations:
 Next bounded action:
 ```
